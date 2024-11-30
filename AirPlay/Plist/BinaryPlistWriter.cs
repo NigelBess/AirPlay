@@ -329,7 +329,7 @@ namespace System.Runtime.Serialization.Plists
             {
                 using (MemoryStream stream = new MemoryStream())
                 {
-                    BinaryFormatter formatter = new BinaryFormatter();
+                    var formatter = new BinaryFormatter();
                     formatter.Serialize(stream, value);
 
                     stream.Position = 0;
